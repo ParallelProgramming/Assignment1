@@ -13,7 +13,15 @@ int main(int args, char **argv)
     double start_time, end_time;
     MPI_Status status;
     mpz_t upper_limit;
-    mpz_init_set_ui(upper_limit, 100000000);
+    
+    if (args > 1)
+    {
+        mpz_init_set_ui(upper_limit, atoi(argv[1]));
+    } 
+    else
+    {
+        mpz_init_set_ui(upper_limit, 100000000);
+    }
 
     if (MPI_Init(&args, &argv) != MPI_SUCCESS)
     {
