@@ -113,6 +113,7 @@ int main(int args, char **argv)
         }
     }
 
+    unsigned long int upper_limit_int = mpz_get_ui(upper_limit);
     unsigned long int max_gap_int = mpz_get_ui(max_gap);
     unsigned long int left_prime_int = mpz_get_ui(left_prime);
     unsigned long int right_prime_int = mpz_get_ui(right_prime);
@@ -137,7 +138,8 @@ int main(int args, char **argv)
             }
         }
 
-        std::cout << "max prime gap is " << global_max_gap_int
+        std::cout << "upper limit is " << upper_limit_int 
+                  << "\nmax prime gap is " << global_max_gap_int
                   << "\nleft prime is " << global_left_prime_int
                   << "\nright prime is " << global_right_prime_int << std::endl;
     } else

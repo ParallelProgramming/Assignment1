@@ -1,2 +1,2 @@
 mpic++ ./main.cpp -o MaxPrimeGap -lgmp
-mpirun -np 8 ./MaxPrimeGap
+mpirun -np 1 ./MaxPrimeGap
