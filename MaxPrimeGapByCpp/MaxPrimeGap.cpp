@@ -1,3 +1,12 @@
+/*
+ ============================================================================
+ Name        : PrimesGaps.c
+ Author      :
+ Version     : 1.0
+ Description : Finds the largest gap between consecutive primes using
+               parallel approach
+ ============================================================================
+ */
 #include <iostream>
 #include <mpi.h>
 #include <gmp.h>
