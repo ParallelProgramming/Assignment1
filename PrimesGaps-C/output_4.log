@@ -1,0 +1,25 @@
+Mon Sep 25 20:54:09 2017 Process 2 / 4: Working on range: 500000000 to 750000000
+Mon Sep 25 20:54:09 2017 Process 0 / 4: Starting
+Mon Sep 25 20:54:09 2017 Process 0 / 4: Working on range: 0 to 250000000
+Mon Sep 25 20:54:09 2017 Process 1 / 4: Working on range: 250000000 to 500000000
+Mon Sep 25 20:54:09 2017 Process 3 / 4: Working on range: 750000000 to 1000000000
+Mon Sep 25 20:57:05 2017 Process 3 / 4: Sending: max gap - 260, low prime - 944192807.
+Mon Sep 25 20:57:07 2017 Process 1 / 4: Sending: max gap - 282, low prime - 436273009.
+Mon Sep 25 20:57:07 2017 Process 2 / 4: Sending: max gap - 276, low prime - 649580171.
+Mon Sep 25 20:57:10 2017 Process 0 / 4: Received from process 1: max gap - 282, low prime - 436273009.
+Mon Sep 25 20:57:10 2017 Process 0 / 4: Received from process 2: max gap - 276, low prime - 649580171.
+Mon Sep 25 20:57:10 2017 Process 0 / 4: Received from process 3: max gap - 260, low prime - 944192807.
+Mon Sep 25 20:57:10 2017 Process 0 / 4: Largest gap found: 282, between 436273009 and 436273291.
+Mon Sep 25 20:57:10 2017 Process 0 / 4: Run time was 181.012302 seconds
+Mon Sep 25 20:57:10 2017 Process 0 / 4: End
+--- SharcNET Job Epilogue ---
+              job id: 10843055
+         exit status: 0
+            cpu time: 716s / 4.0h (4 %)
+        elapsed time: 185s / 1.0h (5 %)
+      virtual memory: 275.3M / 1.0G (26 %)
+
+Job completed successfully
+WARNING: Job only used 5 % of its requested walltime.
+WARNING: Job only used 4 % of its requested cpu time.
+WARNING: Job only used 26% of its requested memory.
