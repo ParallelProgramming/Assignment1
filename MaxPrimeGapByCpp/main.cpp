@@ -17,7 +17,7 @@ int main(int args, char **argv)
     
     if (args > 1)
     {
-        mpz_init_set_ui(upper_limit, atoi(argv[1]));
+        mpz_init_set_ui(upper_limit, atoll(argv[1]));
     } 
     else
     {
@@ -122,16 +122,16 @@ int main(int args, char **argv)
         }
     }
 
-    unsigned long int upper_limit_int = mpz_get_ui(upper_limit);
-    unsigned long int max_gap_int = mpz_get_ui(max_gap);
-    unsigned long int left_prime_int = mpz_get_ui(left_prime);
-    unsigned long int right_prime_int = mpz_get_ui(right_prime);
+    long long int upper_limit_int = mpz_get_ui(upper_limit);
+    long long int max_gap_int = mpz_get_ui(max_gap);
+    long long int left_prime_int = mpz_get_ui(left_prime);
+    long long int right_prime_int = mpz_get_ui(right_prime);
 
     if (pro_rank_int == 0)
     {
-        unsigned long int global_max_gap_int = max_gap_int; // get results from itself
-        unsigned long int global_left_prime_int = left_prime_int;
-        unsigned long int global_right_prime_int = right_prime_int;
+        long long int global_max_gap_int = max_gap_int; // get results from itself
+        long long int global_left_prime_int = left_prime_int;
+        long long int global_right_prime_int = right_prime_int;
 
         for (int i = 1; i < pro_size_int; i++) // update them with data from other processes
         {
