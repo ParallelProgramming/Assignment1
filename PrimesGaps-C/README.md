@@ -26,4 +26,5 @@ Benchmark for 1,000,000,000 (10^9):
     
 Benchmark for 1,000,000,000,000 (10^12):
 
-  64 CPUs: 3.2 hours
+  		64 CPUs: 3.2 hours
+		32 CPUS: 6.4 hours
