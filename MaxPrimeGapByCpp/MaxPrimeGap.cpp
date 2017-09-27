@@ -42,7 +42,6 @@ int main(int args, char **argv)
 
     MPI_Comm_size(MPI_COMM_WORLD, &pro_size);
     MPI_Comm_rank(MPI_COMM_WORLD, &pro_rank);
-    MPI_Barrier(MPI_COMM_WORLD);
     start_time = MPI_Wtime();
 
     long long quotient = upper_limit / pro_size; // e.g. q=3 u=20 p=6
@@ -106,22 +105,17 @@ int main(int args, char **argv)
             }
         }
 
+        end_time = MPI_Wtime();
         std::cout << "upper limit is " << upper_limit
                   << "\nmax prime gap is " << global_max_gap
                   << "\nleft prime is " << global_left_prime
-                  << "\nright prime is " << global_right_prime << std::endl;
+                  << "\nright prime is " << global_right_prime
+                  << "\nruntime is " << end_time - start_time << "s" << std::endl;
     } else
     {
         MPI_Send(&max_gap, 1, MPI_UNSIGNED_LONG, 0, 0, MPI_COMM_WORLD);
         MPI_Send(&left_prime, 1, MPI_UNSIGNED_LONG, 0, 1, MPI_COMM_WORLD);
         MPI_Send(&right_prime, 1, MPI_UNSIGNED_LONG, 0, 2, MPI_COMM_WORLD);
-    }
-
-    MPI_Barrier(MPI_COMM_WORLD);
-    end_time = MPI_Wtime();
-    if (pro_rank == 0)
-    {
-        std::cout << "runtime is " << end_time - start_time << "s" << std::endl;
     }
 
     MPI_Finalize();
