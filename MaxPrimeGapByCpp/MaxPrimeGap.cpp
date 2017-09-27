@@ -46,7 +46,7 @@ int main(int args, char **argv)
     start_time = MPI_Wtime();
 
     long long quotient = upper_limit / pro_size; // e.g. q=3 u=20 p=6
-    int remainder = pro_size + upper_limit % pro_size; // e.g. r=6+(-4)
+    int remainder = upper_limit % pro_size; // e.g. r=2
     int shift_sum = pro_rank < remainder ? pro_rank : remainder;
     int shift = pro_rank < remainder ? 1 : 0;
     long long start = pro_rank * quotient + shift_sum + 1; // first value of current process
