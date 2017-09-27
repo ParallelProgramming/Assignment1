@@ -56,7 +56,7 @@ int main(int args, char **argv)
     mpz_t gmp_curr, gmp_next_prime;
     mpz_init(gmp_curr);
     mpz_init(gmp_next_prime);
-    for (curr = start; curr < next_start && curr != pre_prime; curr = next_prime)
+    for (curr = start, pre_prime = 0; curr < next_start && curr != pre_prime; curr = next_prime)
     {
         if (curr !=start) // each process will calc the gap of the end,
         {
