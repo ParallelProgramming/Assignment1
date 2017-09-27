@@ -1,0 +1,109 @@
+Tue Sep 26 13:35:35 2017 Process 12 / 32: Working on range: 375000000000 to 406250000000
+Tue Sep 26 13:35:35 2017 Process 28 / 32: Working on range: 875000000000 to 906250000000
+Tue Sep 26 13:35:35 2017 Process 10 / 32: Working on range: 312500000000 to 343750000000
+Tue Sep 26 13:35:35 2017 Process 26 / 32: Working on range: 812500000000 to 843750000000
+Tue Sep 26 13:35:35 2017 Process 1 / 32: Working on range: 31250000000 to 62500000000
+Tue Sep 26 13:35:35 2017 Process 9 / 32: Working on range: 281250000000 to 312500000000
+Tue Sep 26 13:35:35 2017 Process 25 / 32: Working on range: 781250000000 to 812500000000
+Tue Sep 26 13:35:35 2017 Process 17 / 32: Working on range: 531250000000 to 562500000000
+Tue Sep 26 13:35:35 2017 Process 20 / 32: Working on range: 625000000000 to 656250000000
+Tue Sep 26 13:35:35 2017 Process 4 / 32: Working on range: 125000000000 to 156250000000
+Tue Sep 26 13:35:35 2017 Process 7 / 32: Working on range: 218750000000 to 250000000000
+Tue Sep 26 13:35:35 2017 Process 22 / 32: Working on range: 687500000000 to 718750000000
+Tue Sep 26 13:35:35 2017 Process 23 / 32: Working on range: 718750000000 to 750000000000
+Tue Sep 26 13:35:35 2017 Process 18 / 32: Working on range: 562500000000 to 593750000000
+Tue Sep 26 13:35:35 2017 Process 8 / 32: Working on range: 250000000000 to 281250000000
+Tue Sep 26 13:35:35 2017 Process 14 / 32: Working on range: 437500000000 to 468750000000
+Tue Sep 26 13:35:35 2017 Process 2 / 32: Working on range: 62500000000 to 93750000000
+Tue Sep 26 13:35:35 2017 Process 29 / 32: Working on range: 906250000000 to 937500000000
+Tue Sep 26 13:35:35 2017 Process 30 / 32: Working on range: 937500000000 to 968750000000
+Tue Sep 26 13:35:35 2017 Process 24 / 32: Working on range: 750000000000 to 781250000000
+Tue Sep 26 13:35:35 2017 Process 13 / 32: Working on range: 406250000000 to 437500000000
+Tue Sep 26 13:35:35 2017 Process 27 / 32: Working on range: 843750000000 to 875000000000
+Tue Sep 26 13:35:35 2017 Process 31 / 32: Working on range: 968750000000 to 1000000000000
+Tue Sep 26 13:35:35 2017 Process 5 / 32: Working on range: 156250000000 to 187500000000
+Tue Sep 26 13:35:35 2017 Process 6 / 32: Working on range: 187500000000 to 218750000000
+Tue Sep 26 13:35:35 2017 Process 15 / 32: Working on range: 468750000000 to 500000000000
+Tue Sep 26 13:35:35 2017 Process 19 / 32: Working on range: 593750000000 to 625000000000
+Tue Sep 26 13:35:35 2017 Process 21 / 32: Working on range: 656250000000 to 687500000000
+Tue Sep 26 13:35:35 2017 Process 3 / 32: Working on range: 93750000000 to 125000000000
+Tue Sep 26 13:35:35 2017 Process 11 / 32: Working on range: 343750000000 to 375000000000
+Tue Sep 26 13:35:35 2017 Process 0 / 32: Starting
+Tue Sep 26 13:35:35 2017 Process 0 / 32: Working on range: 0 to 31250000000
+Tue Sep 26 13:35:35 2017 Process 16 / 32: Working on range: 500000000000 to 531250000000
+Tue Sep 26 19:10:24 2017 Process 13 / 32: Sending: max gap - 516, low prime - 416608695821.
+Tue Sep 26 19:20:20 2017 Process 16 / 32: Sending: max gap - 450, low prime - 531060842243.
+Tue Sep 26 19:21:01 2017 Process 15 / 32: Sending: max gap - 500, low prime - 487286789723.
+Tue Sep 26 19:25:10 2017 Process 14 / 32: Sending: max gap - 532, low prime - 461690510011.
+Tue Sep 26 19:25:32 2017 Process 17 / 32: Sending: max gap - 462, low prime - 532857173801.
+Tue Sep 26 19:27:14 2017 Process 31 / 32: Sending: max gap - 494, low prime - 993878218139.
+Tue Sep 26 19:34:05 2017 Process 30 / 32: Sending: max gap - 484, low prime - 942509706043.
+Tue Sep 26 19:35:00 2017 Process 26 / 32: Sending: max gap - 474, low prime - 813942473723.
+Tue Sep 26 19:36:13 2017 Process 25 / 32: Sending: max gap - 504, low prime - 789448506659.
+Tue Sep 26 19:41:43 2017 Process 22 / 32: Sending: max gap - 466, low prime - 703718206123.
+Tue Sep 26 19:41:59 2017 Process 8 / 32: Sending: max gap - 444, low prime - 274905296293.
+Tue Sep 26 19:42:04 2017 Process 11 / 32: Sending: max gap - 478, low prime - 367766547571.
+Tue Sep 26 19:43:01 2017 Process 23 / 32: Sending: max gap - 540, low prime - 738832927927.
+Tue Sep 26 19:44:05 2017 Process 24 / 32: Sending: max gap - 484, low prime - 767644374817.
+Tue Sep 26 19:44:12 2017 Process 7 / 32: Sending: max gap - 486, low prime - 241160624143.
+Tue Sep 26 19:44:30 2017 Process 27 / 32: Sending: max gap - 474, low prime - 846399952577.
+Tue Sep 26 19:45:38 2017 Process 6 / 32: Sending: max gap - 454, low prime - 202530831163.
+Tue Sep 26 19:45:43 2017 Process 3 / 32: Sending: max gap - 438, low prime - 101328529441.
+Tue Sep 26 19:45:46 2017 Process 28 / 32: Sending: max gap - 516, low prime - 893531612273.
+Tue Sep 26 19:47:29 2017 Process 12 / 32: Sending: max gap - 478, low prime - 389353209841.
+Tue Sep 26 19:47:49 2017 Process 1 / 32: Sending: max gap - 464, low prime - 42652618343.
+Tue Sep 26 19:49:11 2017 Process 5 / 32: Sending: max gap - 474, low prime - 182226896239.
+Tue Sep 26 19:49:20 2017 Process 0 / 32: Received from process 1: max gap - 464, low prime - 42652618343.
+Tue Sep 26 19:50:28 2017 Process 4 / 32: Sending: max gap - 468, low prime - 127976334671.
+Tue Sep 26 19:50:50 2017 Process 29 / 32: Sending: max gap - 500, low prime - 929156727137.
+Tue Sep 26 19:53:50 2017 Process 0 / 32: Received from process 2: max gap - 450, low prime - 63816175447.
+Tue Sep 26 19:53:50 2017 Process 0 / 32: Received from process 3: max gap - 438, low prime - 101328529441.
+Tue Sep 26 19:53:50 2017 Process 0 / 32: Received from process 4: max gap - 468, low prime - 127976334671.
+Tue Sep 26 19:53:50 2017 Process 0 / 32: Received from process 5: max gap - 474, low prime - 182226896239.
+Tue Sep 26 19:53:50 2017 Process 2 / 32: Sending: max gap - 450, low prime - 63816175447.
+Tue Sep 26 19:53:50 2017 Process 0 / 32: Received from process 6: max gap - 454, low prime - 202530831163.
+Tue Sep 26 19:53:50 2017 Process 0 / 32: Received from process 7: max gap - 486, low prime - 241160624143.
+Tue Sep 26 19:53:50 2017 Process 0 / 32: Received from process 8: max gap - 444, low prime - 274905296293.
+Tue Sep 26 19:55:54 2017 Process 21 / 32: Sending: max gap - 474, low prime - 673420121333.
+Tue Sep 26 19:56:04 2017 Process 10 / 32: Sending: max gap - 454, low prime - 337737093847.
+Tue Sep 26 19:56:10 2017 Process 20 / 32: Sending: max gap - 474, low prime - 634213178969.
+Tue Sep 26 19:56:39 2017 Process 18 / 32: Sending: max gap - 480, low prime - 589097679491.
+Tue Sep 26 19:57:39 2017 Process 19 / 32: Sending: max gap - 534, low prime - 614487453523.
+Tue Sep 26 19:58:17 2017 Process 9 / 32: Sending: max gap - 514, low prime - 304599508537.
+Tue Sep 26 19:58:17 2017 Process 0 / 32: Received from process 9: max gap - 514, low prime - 304599508537.
+Tue Sep 26 19:58:17 2017 Process 0 / 32: Received from process 10: max gap - 454, low prime - 337737093847.
+Tue Sep 26 19:58:17 2017 Process 0 / 32: Received from process 11: max gap - 478, low prime - 367766547571.
+Tue Sep 26 19:58:17 2017 Process 0 / 32: Received from process 12: max gap - 478, low prime - 389353209841.
+Tue Sep 26 19:58:17 2017 Process 0 / 32: Received from process 13: max gap - 516, low prime - 416608695821.
+Tue Sep 26 19:58:17 2017 Process 0 / 32: Received from process 14: max gap - 532, low prime - 461690510011.
+Tue Sep 26 19:58:17 2017 Process 0 / 32: Received from process 15: max gap - 500, low prime - 487286789723.
+Tue Sep 26 19:58:17 2017 Process 0 / 32: Received from process 16: max gap - 450, low prime - 531060842243.
+Tue Sep 26 19:58:17 2017 Process 0 / 32: Received from process 17: max gap - 462, low prime - 532857173801.
+Tue Sep 26 19:58:17 2017 Process 0 / 32: Received from process 18: max gap - 480, low prime - 589097679491.
+Tue Sep 26 19:58:17 2017 Process 0 / 32: Received from process 19: max gap - 534, low prime - 614487453523.
+Tue Sep 26 19:58:17 2017 Process 0 / 32: Received from process 20: max gap - 474, low prime - 634213178969.
+Tue Sep 26 19:58:17 2017 Process 0 / 32: Received from process 21: max gap - 474, low prime - 673420121333.
+Tue Sep 26 19:58:17 2017 Process 0 / 32: Received from process 22: max gap - 466, low prime - 703718206123.
+Tue Sep 26 19:58:17 2017 Process 0 / 32: Received from process 23: max gap - 540, low prime - 738832927927.
+Tue Sep 26 19:58:17 2017 Process 0 / 32: Received from process 24: max gap - 484, low prime - 767644374817.
+Tue Sep 26 19:58:17 2017 Process 0 / 32: Received from process 25: max gap - 504, low prime - 789448506659.
+Tue Sep 26 19:58:17 2017 Process 0 / 32: Received from process 26: max gap - 474, low prime - 813942473723.
+Tue Sep 26 19:58:17 2017 Process 0 / 32: Received from process 27: max gap - 474, low prime - 846399952577.
+Tue Sep 26 19:58:17 2017 Process 0 / 32: Received from process 28: max gap - 516, low prime - 893531612273.
+Tue Sep 26 19:58:17 2017 Process 0 / 32: Received from process 29: max gap - 500, low prime - 929156727137.
+Tue Sep 26 19:58:17 2017 Process 0 / 32: Received from process 30: max gap - 484, low prime - 942509706043.
+Tue Sep 26 19:58:17 2017 Process 0 / 32: Received from process 31: max gap - 494, low prime - 993878218139.
+Tue Sep 26 19:58:17 2017 Process 0 / 32: Largest gap found: 540, between 738832927927 and 738832928467.
+Tue Sep 26 19:58:17 2017 Process 0 / 32: Run time was 22961.895399 seconds
+Tue Sep 26 19:58:17 2017 Process 0 / 32: End
+--- SharcNET Job Epilogue ---
+              job id: 10844302
+         exit status: 0
+            cpu time: 8.3d / 16.0d (52 %)
+        elapsed time: 6.4h / 12.0h (53 %)
+      virtual memory: 230.3M / 1.0G (22 %)
+
+Job completed successfully
+WARNING: Job only used 53 % of its requested walltime.
+WARNING: Job only used 52 % of its requested cpu time.
+WARNING: Job only used 22% of its requested memory.
