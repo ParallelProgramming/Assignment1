@@ -10,6 +10,7 @@
 #include <iostream>
 #include <mpi.h>
 #include <gmp.h>
+#include <stdlib.h>
 
 using namespace std;
 
