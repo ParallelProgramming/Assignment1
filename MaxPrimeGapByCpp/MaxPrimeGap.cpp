@@ -1,10 +1,9 @@
 /*
  ============================================================================
- Name        : MaxPrimeGap.cpp
+ Name        : MaxPrimeGap.c
  Author      : lovejoy (Tianran Wang)
- Version     : 1.8
- Description : Finds the largest gap between consecutive primes using
-               parallel approach
+ Description : To find the largest gap between consecutive primes using
+               parallel approach.
  ============================================================================
  */
 #include <iostream>
@@ -16,23 +15,20 @@ using namespace std;
 
 // check if the result is correct or not -> https://en.wikipedia.org/wiki/Prime_gap
 
-unsigned long long mpz_get_ull(mpz_t t);
-void mpz_set_ull(mpz_t t, unsigned long long l);
-
 int main(int args, char **argv)
 {
-    int pro_size; // size of processes
-    int pro_rank; // rank of current process
+    int pro_size_int; // size of processes
+    int pro_rank_int; // rank of current process
     double start_time, end_time;
     MPI_Status status;
-    unsigned long long upper_limit;
+    mpz_t upper_limit;
 
     if (args > 1)
     {
-        upper_limit = atoll(argv[1]);
+        mpz_init_set_ui(upper_limit, atoll(argv[1]));
     } else
     {
-        upper_limit = 1000000000;
+        mpz_init_set_ui(upper_limit, 1000000000);
     }
 
     if (MPI_Init(&args, &argv) != MPI_SUCCESS)
@@ -40,98 +36,117 @@ int main(int args, char **argv)
         cout << "mpi init error" << endl;
     }
 
-    MPI_Comm_size(MPI_COMM_WORLD, &pro_size);
-    MPI_Comm_rank(MPI_COMM_WORLD, &pro_rank);
+    MPI_Comm_size(MPI_COMM_WORLD, &pro_size_int);
+    MPI_Comm_rank(MPI_COMM_WORLD, &pro_rank_int);
     start_time = MPI_Wtime();
 
-    unsigned long long quotient = upper_limit / pro_size; // e.g. q=3 u=20 p=6
-    int remainder = upper_limit % pro_size; // e.g. r=2
-    int shift_sum = pro_rank < remainder ? pro_rank : remainder;
-    int shift = pro_rank < remainder ? 1 : 0;
-    unsigned long long start = pro_rank * quotient + shift_sum + 1; // first value of current process
-    unsigned long long next_start = start + quotient + shift; // first value of next process if it exists
+    mpz_t pro_size; // size of processes
+    mpz_init_set_ui(pro_size, pro_size_int);
 
-    unsigned long long curr, next_prime, pre_prime, left_prime, right_prime, max_gap, gap;
-    mpz_t gmp_curr, gmp_next_prime;
-    mpz_init(gmp_curr);
-    mpz_init(gmp_next_prime);
-    for (curr = start, pre_prime = 0, max_gap = 0, gap =0; 
-        curr < next_start && curr != pre_prime; 
-        curr = next_prime)
+    mpz_t pro_rank; // rank of current process
+    mpz_init_set_ui(pro_rank, pro_rank_int);
+
+    mpz_t quotient, remainder; // q=u/p , r=mod(u,p)-p
+    mpz_init(quotient);
+    mpz_init(remainder);
+    mpz_cdiv_qr(quotient, remainder, upper_limit, pro_size); // e.g. q=3 r=-4 u=20 p=6
+    mpz_add(remainder, remainder, pro_size); // e.g. r=-4+6
+
+    mpz_t multiple; // multiple = pro_rank * quotient, for calculating start
+    mpz_init(multiple);
+    mpz_mul(multiple, pro_rank, quotient);
+
+    mpz_t shift_sum, shift; // shift_sum = min(pro_rank, remainder)
+    if (mpz_cmp(pro_rank, remainder) < 0) // pro_rank < remainder
     {
-        if (curr != start) // each process will calc the gap of the end
-        {
-            pre_prime = next_prime; // ignore the gap at the beginning
-        }
-
-        mpz_set_ull(gmp_curr, curr);
-        mpz_nextprime(gmp_next_prime, gmp_curr); // gmp build-in method
-        next_prime = mpz_get_ull(gmp_next_prime);
-
-        if (next_prime > upper_limit) // if it exceed the upper limit
-        {
-            next_prime = pre_prime;
-        }
-
-        if (curr != start) // calc gap for each 2 prime numbers
-        {
-            gap = next_prime - pre_prime;
-        }
-
-        if (gap > max_gap) // update max gap of each process
-        {
-            max_gap = gap;
-            left_prime = pre_prime;
-            right_prime = next_prime;
-            gap = 0;
-        }
+        mpz_init_set(shift_sum, pro_rank);
+        mpz_init_set_ui(shift, 1);
+    } else // pro_rank >= remainder
+    {
+        mpz_init_set(shift_sum, remainder);
+        mpz_init_set_ui(shift, 0);
     }
 
-    if (pro_rank == 0)
+    mpz_t start; // first value of current process
+    mpz_init(start);
+    mpz_add(start, multiple, shift_sum);// start == multiple + shift_sum
+
+    mpz_t next_start; // first value of next process if it exists
+    mpz_init(next_start);
+    mpz_add(next_start, start, quotient);
+    mpz_add(next_start, next_start, shift); // next_start = start + quotient + shift
+
+    mpz_t cur_prime, next_prime, left_prime, right_prime, max_gap, gap;
+    mpz_init(cur_prime);
+    mpz_init(next_prime);
+    mpz_init(left_prime);
+    mpz_init(right_prime);
+    mpz_init(max_gap);
+    mpz_init(gap);
+
+    mpz_nextprime(cur_prime, start);
+    while (mpz_cmp(cur_prime, next_start) <= 0)
     {
-        unsigned long long global_max_gap = max_gap; // get results from itself
-        unsigned long long global_left_prime = left_prime;
-        unsigned long long global_right_prime = right_prime;
-
-        for (int i = 1; i < pro_size; i++) // update them with data from other processes
+        mpz_nextprime(next_prime, cur_prime);
+        if (mpz_cmp(next_prime, upper_limit) > 0)
         {
-            MPI_Recv(&max_gap, 1, MPI_LONG_LONG, i, 0, MPI_COMM_WORLD, &status);
-            MPI_Recv(&left_prime, 1, MPI_LONG_LONG, i, 1, MPI_COMM_WORLD, &status);
-            MPI_Recv(&right_prime, 1, MPI_LONG_LONG, i, 2, MPI_COMM_WORLD, &status);
+            mpz_set_ui(gap, 0);
+        } else
+        {
+            mpz_sub(gap, next_prime, cur_prime);
+        }
+        if (mpz_cmp(gap, max_gap) > 0) // update max gap of each process
+        {
+            mpz_set(max_gap, gap);
+            mpz_set(left_prime, cur_prime);
+            mpz_set(right_prime, next_prime);
+            mpz_set_ui(gap, 0);
+        }
+        mpz_set(cur_prime, next_prime);
+    }
 
-            if (max_gap > global_max_gap)
+    long long int upper_limit_int = mpz_get_ui(upper_limit);
+    long long int max_gap_int = mpz_get_ui(max_gap);
+    long long int left_prime_int = mpz_get_ui(left_prime);
+    long long int right_prime_int = mpz_get_ui(right_prime);
+
+    if (pro_rank_int == 0)
+    {
+        long long int global_max_gap_int = max_gap_int; // get results from itself
+        long long int global_left_prime_int = left_prime_int;
+        long long int global_right_prime_int = right_prime_int;
+
+        for (int i = 1; i < pro_size_int; i++) // update them with data from other processes
+        {
+            MPI_Recv(&max_gap_int, 1, MPI_UNSIGNED_LONG, i, 0, MPI_COMM_WORLD, &status);
+            MPI_Recv(&left_prime_int, 1, MPI_UNSIGNED_LONG, i, 1, MPI_COMM_WORLD, &status);
+            MPI_Recv(&right_prime_int, 1, MPI_UNSIGNED_LONG, i, 2, MPI_COMM_WORLD, &status);
+
+            if (max_gap_int > global_max_gap_int)
             {
-                global_max_gap = max_gap;
-                global_left_prime = left_prime;
-                global_right_prime = right_prime;
+                global_max_gap_int = max_gap_int;
+                global_left_prime_int = left_prime_int;
+                global_right_prime_int = right_prime_int;
             }
         }
 
-        end_time = MPI_Wtime();
-        std::cout << "upper limit is " << upper_limit
-                  << "\nmax prime gap is " << global_max_gap
-                  << "\nleft prime is " << global_left_prime
-                  << "\nright prime is " << global_right_prime
-                  << "\nruntime is " << end_time - start_time << "s" << std::endl;
+        std::cout << "upper limit is " << upper_limit_int
+                  << "\nmax prime gap is " << global_max_gap_int
+                  << "\nleft prime is " << global_left_prime_int
+                  << "\nright prime is " << global_right_prime_int << std::endl;
     } else
     {
-        MPI_Send(&max_gap, 1, MPI_UNSIGNED_LONG, 0, 0, MPI_COMM_WORLD);
-        MPI_Send(&left_prime, 1, MPI_UNSIGNED_LONG, 0, 1, MPI_COMM_WORLD);
-        MPI_Send(&right_prime, 1, MPI_UNSIGNED_LONG, 0, 2, MPI_COMM_WORLD);
+        MPI_Send(&max_gap_int, 1, MPI_UNSIGNED_LONG, 0, 0, MPI_COMM_WORLD);
+        MPI_Send(&left_prime_int, 1, MPI_UNSIGNED_LONG, 0, 1, MPI_COMM_WORLD);
+        MPI_Send(&right_prime_int, 1, MPI_UNSIGNED_LONG, 0, 2, MPI_COMM_WORLD);
+    }
+
+    end_time = MPI_Wtime();
+    if (pro_rank_int == 0)
+    {
+        std::cout << "runtime is " << end_time - start_time << "s" << std::endl;
     }
 
     MPI_Finalize();
     return 0;
-}
-
-unsigned long long mpz_get_ull(mpz_t t)
-{
-    unsigned long long val = 0;
-    mpz_export(&val, 0, -1, sizeof val, 0, 0, t);
-    return val;
-}
-
-void mpz_set_ull(mpz_t t, unsigned long long l)
-{
-    mpz_import(t, 1, -1, sizeof l, 0, 0, &l);
 }
