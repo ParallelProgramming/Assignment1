@@ -1,0 +1,37 @@
+command:sqsub -q mpi -r 3d -o ofile_12_64.log  -n 64 ./MaxPrimeGap 1000000000000
+jobid:10857630
+runtime:17209.5s => 4.78h
+
+command:sqsub -q mpi -r 3d -o ofile_12_32.log  -n 32 ./MaxPrimeGap 1000000000000
+jobid:10857631
+runtime: no result yet
+
+-----------------------------------------------------------------------------------------
+
+command:sqsub -q mpi -r 3d -o ofile_9_64.log  -n 64 ./MaxPrimeGap 1000000000
+jobid:10857609
+runtime:19.452s
+
+command:sqsub -q mpi -r 3d -o ofile_9_32.log  -n 32 ./MaxPrimeGap 1000000000
+jobid:10857624
+runtime:37.985s
+
+command:sqsub -q mpi -r 3d -o ofile_9_16.log  -n 16 ./MaxPrimeGap 1000000000
+jobid:10857625
+runtime:73.8444s
+
+command:sqsub -q mpi -r 3d -o ofile_9_8.log  -n 8 ./MaxPrimeGap 1000000000
+jobid:10857623
+runtime:145.811s
+
+command:sqsub -q mpi -r 3d -o ofile_9_4.log  -n 4 ./MaxPrimeGap 1000000000
+jobid:10857626
+runtime:285.531s
+
+command:sqsub -q mpi -r 3d -o ofile_9_2.log  -n 2 ./MaxPrimeGap 1000000000
+jobid:10857628
+runtime:377.56s
+
+command:sqsub -q mpi -r 3d -o ofile_9_1.log  -n 1 ./MaxPrimeGap 1000000000
+jobid:10857629
+runtime:756.83s
