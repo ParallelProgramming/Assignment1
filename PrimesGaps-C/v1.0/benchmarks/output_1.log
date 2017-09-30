@@ -1,0 +1,16 @@
+Wed Sep 27 08:36:33 2017 Process 0 / 1: Starting
+Wed Sep 27 08:36:33 2017 Process 0 / 1: Working on range: 0 to 1000000000
+Wed Sep 27 08:48:25 2017 Process 0 / 1: Largest gap found: 282, between 436273009 and 436273291.
+Wed Sep 27 08:48:25 2017 Process 0 / 1: Run time was 712.224345 seconds
+Wed Sep 27 08:48:25 2017 Process 0 / 1: End
+--- SharcNET Job Epilogue ---
+              job id: 10846362
+         exit status: 0
+            cpu time: 712s / 3.0h (6 %)
+        elapsed time: 714s / 3.0h (6 %)
+      virtual memory: 340.6M / 1.0G (33 %)
+
+Job completed successfully
+WARNING: Job only used 6 % of its requested walltime.
+WARNING: Job only used 6 % of its requested cpu time.
+WARNING: Job only used 33% of its requested memory.

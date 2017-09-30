@@ -1,0 +1,31 @@
+Mon Sep 25 20:54:11 2017 Process 1 / 6: Working on range: 166666667 to 333333334
+Mon Sep 25 20:54:11 2017 Process 0 / 6: Starting
+Mon Sep 25 20:54:11 2017 Process 0 / 6: Working on range: 0 to 166666667
+Mon Sep 25 20:54:11 2017 Process 3 / 6: Working on range: 500000001 to 666666668
+Mon Sep 25 20:54:11 2017 Process 5 / 6: Working on range: 833333334 to 1000000000
+Mon Sep 25 20:54:11 2017 Process 2 / 6: Working on range: 333333334 to 500000001
+Mon Sep 25 20:54:11 2017 Process 4 / 6: Working on range: 666666668 to 833333334
+Mon Sep 25 20:56:07 2017 Process 5 / 6: Sending: max gap - 260, low prime - 944192807.
+Mon Sep 25 20:56:07 2017 Process 4 / 6: Sending: max gap - 250, low prime - 708730291.
+Mon Sep 25 20:56:08 2017 Process 2 / 6: Sending: max gap - 282, low prime - 436273009.
+Mon Sep 25 20:56:10 2017 Process 1 / 6: Sending: max gap - 248, low prime - 191912783.
+Mon Sep 25 20:56:10 2017 Process 3 / 6: Sending: max gap - 276, low prime - 649580171.
+Mon Sep 25 20:56:12 2017 Process 0 / 6: Received from process 1: max gap - 248, low prime - 191912783.
+Mon Sep 25 20:56:12 2017 Process 0 / 6: Received from process 2: max gap - 282, low prime - 436273009.
+Mon Sep 25 20:56:12 2017 Process 0 / 6: Received from process 3: max gap - 276, low prime - 649580171.
+Mon Sep 25 20:56:12 2017 Process 0 / 6: Received from process 4: max gap - 250, low prime - 708730291.
+Mon Sep 25 20:56:12 2017 Process 0 / 6: Received from process 5: max gap - 260, low prime - 944192807.
+Mon Sep 25 20:56:12 2017 Process 0 / 6: Largest gap found: 282, between 436273009 and 436273291.
+Mon Sep 25 20:56:12 2017 Process 0 / 6: Run time was 121.786692 seconds
+Mon Sep 25 20:56:12 2017 Process 0 / 6: End
+--- SharcNET Job Epilogue ---
+              job id: 10843057
+         exit status: 0
+            cpu time: 711s / 6.0h (3 %)
+        elapsed time: 127s / 1.0h (3 %)
+      virtual memory: 263.1M / 1.0G (25 %)
+
+Job completed successfully
+WARNING: Job only used 3 % of its requested walltime.
+WARNING: Job only used 3 % of its requested cpu time.
+WARNING: Job only used 25% of its requested memory.

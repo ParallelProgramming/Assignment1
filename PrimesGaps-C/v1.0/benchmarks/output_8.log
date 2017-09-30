@@ -1,0 +1,37 @@
+Mon Sep 25 20:54:08 2017 Process 4 / 8: Working on range: 500000000 to 625000000
+Mon Sep 25 20:54:08 2017 Process 3 / 8: Working on range: 375000000 to 500000000
+Mon Sep 25 20:54:08 2017 Process 6 / 8: Working on range: 750000000 to 875000000
+Mon Sep 25 20:54:08 2017 Process 5 / 8: Working on range: 625000000 to 750000000
+Mon Sep 25 20:54:08 2017 Process 7 / 8: Working on range: 875000000 to 1000000000
+Mon Sep 25 20:54:08 2017 Process 2 / 8: Working on range: 250000000 to 375000000
+Mon Sep 25 20:54:08 2017 Process 1 / 8: Working on range: 125000000 to 250000000
+Mon Sep 25 20:54:08 2017 Process 0 / 8: Starting
+Mon Sep 25 20:54:08 2017 Process 0 / 8: Working on range: 0 to 125000000
+Mon Sep 25 20:55:36 2017 Process 5 / 8: Sending: max gap - 276, low prime - 649580171.
+Mon Sep 25 20:55:38 2017 Process 7 / 8: Sending: max gap - 260, low prime - 944192807.
+Mon Sep 25 20:55:39 2017 Process 3 / 8: Sending: max gap - 282, low prime - 436273009.
+Mon Sep 25 20:55:40 2017 Process 6 / 8: Sending: max gap - 246, low prime - 848758531.
+Mon Sep 25 20:55:40 2017 Process 1 / 8: Sending: max gap - 248, low prime - 191912783.
+Mon Sep 25 20:55:41 2017 Process 2 / 8: Sending: max gap - 242, low prime - 367876529.
+Mon Sep 25 20:55:41 2017 Process 4 / 8: Sending: max gap - 250, low prime - 516540163.
+Mon Sep 25 20:55:43 2017 Process 0 / 8: Received from process 1: max gap - 248, low prime - 191912783.
+Mon Sep 25 20:55:43 2017 Process 0 / 8: Received from process 2: max gap - 242, low prime - 367876529.
+Mon Sep 25 20:55:43 2017 Process 0 / 8: Received from process 3: max gap - 282, low prime - 436273009.
+Mon Sep 25 20:55:43 2017 Process 0 / 8: Received from process 4: max gap - 250, low prime - 516540163.
+Mon Sep 25 20:55:43 2017 Process 0 / 8: Received from process 5: max gap - 276, low prime - 649580171.
+Mon Sep 25 20:55:43 2017 Process 0 / 8: Received from process 6: max gap - 246, low prime - 848758531.
+Mon Sep 25 20:55:43 2017 Process 0 / 8: Received from process 7: max gap - 260, low prime - 944192807.
+Mon Sep 25 20:55:43 2017 Process 0 / 8: Largest gap found: 282, between 436273009 and 436273291.
+Mon Sep 25 20:55:43 2017 Process 0 / 8: Run time was 94.450740 seconds
+Mon Sep 25 20:55:43 2017 Process 0 / 8: End
+--- SharcNET Job Epilogue ---
+              job id: 10842892
+         exit status: 0
+            cpu time: 746s / 8.0h (2 %)
+        elapsed time: 99s / 1.0h (2 %)
+      virtual memory: 249.3M / 1.0G (24 %)
+
+Job completed successfully
+WARNING: Job only used 2 % of its requested walltime.
+WARNING: Job only used 2 % of its requested cpu time.
+WARNING: Job only used 24% of its requested memory.
