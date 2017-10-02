@@ -1,0 +1,19 @@
+Mon Oct  2 12:23:20 2017 Process 0 / 2: Starting
+Mon Oct  2 12:23:20 2017 Process 0 / 2: Working on range: 0 to 500000000
+Mon Oct  2 12:23:20 2017 Process 1 / 2: Working on range: 500000000 to 1000000000
+Mon Oct  2 12:32:25 2017 Process 0 / 2: Found gap - 282, low prime - 436273009.
+Mon Oct  2 12:32:25 2017 Process 0 / 2: Received from process 1: max gap - 276, low prime - 649580171.
+Mon Oct  2 12:32:25 2017 Process 0 / 2: Largest gap found: 282, between 436273009 and 436273291.
+Mon Oct  2 12:32:25 2017 Process 0 / 2: Run time was 545.334086 seconds
+Mon Oct  2 12:32:25 2017 Process 0 / 2: End
+--- SharcNET Job Epilogue ---
+              job id: 10860531
+         exit status: 0
+            cpu time: 1078s / 2.0h (14 %)
+        elapsed time: 579s / 1.0h (16 %)
+      virtual memory: 320.2M / 1.0G (31 %)
+
+Job completed successfully
+WARNING: Job only used 16 % of its requested walltime.
+WARNING: Job only used 14 % of its requested cpu time.
+WARNING: Job only used 31% of its requested memory.

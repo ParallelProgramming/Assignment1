@@ -1,0 +1,29 @@
+Mon Oct  2 12:22:35 2017 Process 0 / 7: Starting
+Mon Oct  2 12:22:35 2017 Process 0 / 7: Working on range: 0 to 142857143
+Mon Oct  2 12:22:35 2017 Process 4 / 7: Working on range: 571428572 to 714285715
+Mon Oct  2 12:22:35 2017 Process 1 / 7: Working on range: 142857143 to 285714286
+Mon Oct  2 12:22:35 2017 Process 2 / 7: Working on range: 285714286 to 428571429
+Mon Oct  2 12:22:35 2017 Process 5 / 7: Working on range: 714285715 to 857142858
+Mon Oct  2 12:22:35 2017 Process 3 / 7: Working on range: 428571429 to 571428572
+Mon Oct  2 12:22:35 2017 Process 6 / 7: Working on range: 857142858 to 1000000000
+Mon Oct  2 12:24:16 2017 Process 0 / 7: Found gap - 222, low prime - 122164747.
+Mon Oct  2 12:24:16 2017 Process 0 / 7: Received from process 3: max gap - 282, low prime - 436273009.
+Mon Oct  2 12:24:16 2017 Process 0 / 7: Received from process 5: max gap - 246, low prime - 848758531.
+Mon Oct  2 12:24:16 2017 Process 0 / 7: Received from process 6: max gap - 260, low prime - 944192807.
+Mon Oct  2 12:24:16 2017 Process 0 / 7: Received from process 1: max gap - 248, low prime - 191912783.
+Mon Oct  2 12:24:16 2017 Process 0 / 7: Received from process 2: max gap - 250, low prime - 387096133.
+Mon Oct  2 12:24:17 2017 Process 0 / 7: Received from process 4: max gap - 276, low prime - 649580171.
+Mon Oct  2 12:24:17 2017 Process 0 / 7: Largest gap found: 282, between 436273009 and 436273291.
+Mon Oct  2 12:24:17 2017 Process 0 / 7: Run time was 101.760151 seconds
+Mon Oct  2 12:24:17 2017 Process 0 / 7: End
+--- SharcNET Job Epilogue ---
+              job id: 10860536
+         exit status: 0
+            cpu time: 695s / 7.0h (2 %)
+        elapsed time: 106s / 1.0h (2 %)
+      virtual memory: 253.5M / 1.0G (24 %)
+
+Job completed successfully
+WARNING: Job only used 2 % of its requested walltime.
+WARNING: Job only used 2 % of its requested cpu time.
+WARNING: Job only used 24% of its requested memory.
